@@ -5,7 +5,8 @@
   var config = {
     alljs: [
       'gulpfile.js',
-      'gulp.config.js'
+      'gulp.config.js',
+      'src/client/**/*.js'
     ]
   };
 
