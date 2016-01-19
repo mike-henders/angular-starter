@@ -1,0 +1,8 @@
+{
+/*  "preset": "google",
+  "esnext": true,
+  "maximumLineLength": {
+    "value": 120,
+    "allExcept": ["comments, "regex"]
+  }*/
+}

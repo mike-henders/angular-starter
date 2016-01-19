@@ -1,0 +1,34 @@
+{
+  "name": "angular-starter",
+  "version": "0.1.0",
+  "description": "AngularJS 1.4 + ES6 starter",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mike-henders/angular-starter.git"
+  },
+  "keywords": [
+    "AngularJS",
+    "ES6"
+  ],
+  "author": "Mike Henders",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mike-henders/angular-starter/issues"
+  },
+  "homepage": "https://github.com/mike-henders/angular-starter#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jscs": "^3.0.2",
+    "gulp-jscs-stylish": "^1.3.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-task-listing": "^1.0.1",
+    "jscs": "^2.8.0",
+    "jscs-stylish": "^0.3.1",
+    "jshint": "^2.9.1",
+    "jshint-stylish": "^2.1.0"
+  }
+}
