@@ -3,6 +3,9 @@ logs
 *.log
 npm-debug.log*
 
+# Editor backup files
+*~
+
 # Runtime data
 pids
 *.pid
