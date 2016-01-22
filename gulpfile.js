@@ -25,4 +25,11 @@
       singleRun: true
     }, done).start();
   });
+
+  gulp.task('connect', function() {
+    plugins.connect.server({
+      root: 'src/client/',
+      livereload: true
+    });
+  });
 })();
