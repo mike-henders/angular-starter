@@ -17,4 +17,12 @@
       .pipe(plugins.jshint.reporter('jshint-stylish'))
       .pipe(plugins.jshint.reporter('fail'));
   });
+
+  gulp.task('test', function(done) {
+    var Server = require('karma').Server;
+    new Server({
+      configFile: __dirname + '/karma.conf.js',
+      singleRun: true
+    }, done).start();
+  });
 })();

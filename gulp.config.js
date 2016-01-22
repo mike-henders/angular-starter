@@ -6,6 +6,7 @@
     alljs: [
       'gulpfile.js',
       'gulp.config.js',
+      'karma.confg.js',
       'src/client/**/*.js'
     ]
   };
