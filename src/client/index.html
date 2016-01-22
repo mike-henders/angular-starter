@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0">
     <title>Angular Starter</title>
+    <script src="system.js"></script>
+    <script>
+System.config({
+  baseURL: '/app'
+});
+System.import('app.js');
+    </script>
   </head>
   <body>
     <h1>Hello, Angular Starter</h1>
