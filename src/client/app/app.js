@@ -1,5 +1,3 @@
-(function() {
-  'use strict';
+import { foo } from './bar.js';
 
-  console.log('Hi');
-})();
+console.log(foo);

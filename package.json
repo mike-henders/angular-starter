@@ -39,6 +39,8 @@
     "karma-jasmine": "^0.3.6"
   },
   "dependencies": {
+    "babel": "^6.3.26",
+    "babel-runtime": "^6.3.19",
     "systemjs": "^0.19.17"
   }
 }
