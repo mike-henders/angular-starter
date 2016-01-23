@@ -20,17 +20,25 @@ module.exports = function(config) {
         baseURL: '.',
         paths: {
           'babel': '../../node_modules/babel-core/browser.js',
-          'systemjs': '../../node_modules/systemjs/dist/system.js',
           'system-polyfills': '../../node_modules/systemjs/dist/system-polyfills.js',
-          'es6-module-loader': '../../node_modules/es6-module-loader/dist/es6-module-loader.js',
-          'angular': '../../node_modules/angular/angular.min.js'
+          'systemjs': '../../node_modules/systemjs/dist/system.js',
+          'es6-module-loader': '../../node_modules/es6-module-loader/dist/es6-module-loader.js'
         }
       }
     },
 
     // list of files / patterns to load in the browser
     files: [
-      'lib/vendor/angular.min.js',
+      { 
+        pattern: '**/lib/vendor/*.js',
+        watched: false,
+        included: false
+      },
+      { 
+        pattern: '**/lib/vendor/*.js.map',
+        watched: false,
+        included: false
+      },
       'app/*.js',
       'app/**/*.js',
       'specs/*.spec.js',

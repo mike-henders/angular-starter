@@ -7,6 +7,12 @@ System.config({
   map: {
     'babel': 'lib/vendor/browser.min.js',
     'system-polyfills': 'lib/vendor/system-polyfills.js',
-    'angular': 'lib/vendor/angular.min.js'
-  }
+    'vendor/angular.js': 'lib/vendor/angular.min.js'
+  },
+  meta: {
+    'vendor/angular.js': {
+      format: 'global',
+      exports: 'angular'
+    }
+  } 
 });

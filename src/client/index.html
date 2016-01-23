@@ -9,11 +9,12 @@
     <script>
 Promise.all([
     System.import('app/app.js'),
-    System.import('angular')
+    System.import('vendor/angular.js')
 ]).then(function(modules) {
-  var angular = modules[1].angular;
+  var app = modules[0];
+  var angular = modules[1];
   angular.bootstrap(document, ['app']);
-  document.getElementById('answer').innerText = modules[0].think();
+  document.getElementById('answer').innerText = app.think();
 });
     </script>
   </head>

@@ -7,7 +7,8 @@
       'gulpfile.js',
       'gulp.config.js',
       'karma.confg.js',
-      'src/client/**/*.js'
+      'src/client/**/*.js',
+      '!src/client/lib/vendor/**/*.js'
     ]
   };
 
