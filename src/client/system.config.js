@@ -5,7 +5,7 @@ System.config({
   babelOptions: {
   },
   map: {
-    'babel': 'lib/browser.js',
-    'system-polyfills': 'lib/system-polyfills.js'
+    'babel': 'lib/vendor/browser.min.js',
+    'system-polyfills': 'lib/vendor/system-polyfills.js'
   }
 });

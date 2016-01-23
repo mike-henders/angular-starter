@@ -26,6 +26,25 @@
     }, done).start();
   });
 
+  gulp.task('move', function() {
+    let nodeModules = [].concat(
+      'node_modules/babel-core/browser.min.js',
+      'node_modules/systemjs/dist/system.js',
+      'node_modules/systemjs/dist/system.js.map',
+      'node_modules/systemjs/dist/system-polyfills.js',
+      'node_modules/systemjs/dist/system-polyfills.js.map',
+      'node_modules/es6-module-loader/dist/es6-module-loader.js',
+      'node_modules/es6-module-loader/dist/es6-module-loader.js.map'
+    );
+
+    return gulp.src(nodeModules)
+      .pipe(gulp.dest('src/client/lib/vendor/'));
+  });
+
+  gulp.task('build', ['move'], function(done) {
+    done();
+  });
+
   gulp.task('connect', function() {
     plugins.connect.server({
       root: 'src/client/',
