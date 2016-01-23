@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "AngularJS 1.4 + ES6 starter",
   "scripts": {
+    "install": "gulp move",
     "test": "gulp test"
   },
   "repository": {
@@ -46,6 +47,7 @@
     "angular": "^1.4.9",
     "babel": "^6.3.26",
     "babel-runtime": "^6.3.19",
+    "jquery": "^2.2.0",
     "systemjs": "^0.19.17"
   }
 }

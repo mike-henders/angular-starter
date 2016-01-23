@@ -14,12 +14,12 @@ Promise.all([
   var app = modules[0];
   var angular = modules[1];
   angular.bootstrap(document, ['app']);
-  document.getElementById('answer').innerText = app.think();
+  angular.element('.answer').text(app.think());
 });
     </script>
   </head>
   <body>
     <h1 ng-controller="HelloController">{{greeting}}</h1>
-    <p>The answer is: <span id="answer">... in deep thought ...</span><p>
+    <p>The answer is: <span class="answer">... in deep thought ...</span><p>
   </body>
 </html>
