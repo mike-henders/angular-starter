@@ -22,14 +22,15 @@ module.exports = function(config) {
           'babel': '../../node_modules/babel-core/browser.js',
           'systemjs': '../../node_modules/systemjs/dist/system.js',
           'system-polyfills': '../../node_modules/systemjs/dist/system-polyfills.js',
-          'es6-module-loader': '../../node_modules/es6-module-loader/dist/es6-module-loader.js'
+          'es6-module-loader': '../../node_modules/es6-module-loader/dist/es6-module-loader.js',
+          'angular': '../../node_modules/angular/angular.min.js'
         }
       }
     },
 
     // list of files / patterns to load in the browser
     files: [
-     // 'node_modules/phantomjs-polyfill/bind-polyfill.js',
+      'lib/vendor/angular.min.js',
       'app/*.js',
       'app/**/*.js',
       'specs/*.spec.js',
