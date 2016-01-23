@@ -5,7 +5,7 @@ module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
+    basePath: 'src/client/',
 
     plugins: ['karma-systemjs', 'karma-jasmine', 'karma-chrome-launcher'],
 
@@ -14,9 +14,10 @@ module.exports = function(config) {
     frameworks: ['systemjs', 'jasmine'],
 
     systemjs: {
-      configFile: 'src/client/system.config.js',
+      configFile: 'system.config.js',
 
       config: {
+        baseURL: '.',
         paths: {
           'babel': '../../node_modules/babel-core/browser.js',
           'systemjs': '../../node_modules/systemjs/dist/system.js',
@@ -29,13 +30,14 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
      // 'node_modules/phantomjs-polyfill/bind-polyfill.js',
-      'src/client/**/*.!(spec.)js',
-      'src/client/specs/*.spec.js'
+      'app/*.js',
+      'app/**/*.js',
+      'specs/*.spec.js',
+      'specs/**/*.spec.js'
     ],
 
     // list of files to exclude
     exclude: [
-      'src/client/lib/*'
     ],
 
 

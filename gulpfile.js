@@ -9,7 +9,7 @@
   gulp.task('help', plugins.taskListing);
   gulp.task('default', plugins.taskListing);
   
-  gulp.task('lint', () => {
+  gulp.task('lint', function() {
     gulp.src(config.alljs)
       .pipe(plugins.jshint())
       .pipe(plugins.jscs())

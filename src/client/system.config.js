@@ -1,10 +1,11 @@
+/* global System */
 System.config({
-  baseURL: 'src/client/',
+  baseURL: '.',
   transpiler: 'babel',
   babelOptions: {
   },
   map: {
-    'babel': 'node_modules/babel-core/browser.js'
+    'babel': 'lib/browser.js',
+    'system-polyfills': 'lib/system-polyfills.js'
   }
 });
-

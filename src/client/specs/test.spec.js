@@ -1,7 +1,7 @@
-import { foo } from 'app/bar.js';
+import { think } from 'app/app.js';
 
 describe('first jasmine test', function() {
-  it('should pass', function() {
-    expect(foo).toBe(42);
+  it('should think', function() {
+    expect(think()).toBe(42);
   });
 });
