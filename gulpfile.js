@@ -5,6 +5,7 @@
   const gulp = require('gulp');
   const plugins = require('gulp-load-plugins')({lazy: false});
   const config = require('./gulp.config.js');
+  const Builder = require('systemjs-builder');
   
   gulp.task('help', plugins.taskListing);
   gulp.task('default', plugins.taskListing);
@@ -47,7 +48,16 @@
   });
 
   gulp.task('build', ['move'], function(done) {
-    done();
+    var builder = new Builder('src/client/', 'src/client/system.config.js');
+    builder.bundle('app/app.js', 'src/client/dist/bundle.js')
+    .then(function() {
+      console.log('Build complete');
+      done();
+    })
+    .catch(function(err) {
+      console.error(err);
+      done();
+    });
   });
 
   gulp.task('connect', function() {

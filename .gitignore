@@ -38,3 +38,6 @@ node_modules
 
 # Client dependencies copied from node_modules
 src/client/lib/vendor
+
+# Built JavaScript
+src/client/dist

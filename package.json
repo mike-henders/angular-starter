@@ -43,7 +43,8 @@
     "karma-phantomjs-launcher": "^0.2.3",
     "karma-systemjs": "^0.10.0",
     "phantomjs": "^1.9.19",
-    "phantomjs-polyfill": "0.0.1"
+    "phantomjs-polyfill": "0.0.1",
+    "systemjs-builder": "^0.15.4"
   },
   "dependencies": {
     "angular": "^1.4.9",
