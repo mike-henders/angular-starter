@@ -19,6 +19,7 @@ module.exports = function(config) {
       config: {
         baseURL: '.',
         paths: {
+          'phantomjs-polyfill': '../../node_modules/phantomjs-polyfill/bind-polyfill.js',
           'babel': '../../node_modules/babel-core/browser.js',
           'system-polyfills': '../../node_modules/systemjs/dist/system-polyfills.js',
           'systemjs': '../../node_modules/systemjs/dist/system.js',
