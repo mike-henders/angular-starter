@@ -3,6 +3,9 @@ System.config({
   baseURL: '.',
   transpiler: 'babel',
   babelOptions: {
+    "optional": [
+      "runtime"
+    ]
   },
   map: {
     'babel': 'lib/vendor/browser.min.js',

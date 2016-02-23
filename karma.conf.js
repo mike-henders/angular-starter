@@ -7,7 +7,7 @@ module.exports = function(config) {
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: 'src/client/',
 
-    plugins: ['karma-systemjs', 'karma-jasmine', 'karma-phantomjs-launcher', 'karma-chrome-launcher'],
+    plugins: ['karma-systemjs', 'karma-coverage', 'karma-jasmine', 'karma-phantomjs-launcher', 'karma-chrome-launcher', 'karma-babel-preprocessor'],
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
@@ -40,8 +40,10 @@ module.exports = function(config) {
         watched: false,
         included: false
       },
-      'app/*.js',
-      'app/**/*.js',
+      {
+        pattern: 'app/**/*.js',
+        included: false
+      },
       'specs/*.spec.js',
       'specs/**/*.spec.js'
     ],
@@ -54,14 +56,34 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      'app/**/*.js': ['babel', 'sourcemap', 'coverage']
     },
 
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['progress', 'coverage'],
 
+    babelPreprocessor: {
+      options: {
+        presets: ['es2015'],
+        sourceMap: 'inline'
+      },
+      sourceFileName: function(file) {
+        console.log('Source file name for ' + file.originalPath);
+        return file.originalPath;
+      }
+    },
+
+    coverageReporter: {
+      type: 'text',
+      dir: 'coverage/',
+      instrumenters: { isparta: require('isparta') },
+      instrumenter: {
+        'app/**/*.js': 'isparta'
+      }
+    },
 
     // web server port
     port: 9876,
