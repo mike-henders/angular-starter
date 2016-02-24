@@ -7,8 +7,8 @@ System.config({
   map: {
     'babel': 'lib/vendor/browser.min.js',
     'system-polyfills': 'lib/vendor/system-polyfills.js',
-    'vendor/angular.js': 'lib/vendor/angular.min.js',
-    'vendor/jquery.js': 'lib/vendor/jquery.min.js',
+    'vendor/angular.js': 'https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js',
+    'vendor/jquery.js': 'https://code.jquery.com/jquery-2.2.1.min.js'
   },
   meta: {
     'vendor/jquery.js': {
