@@ -19,7 +19,8 @@ module.exports = function(config) {
       config: {
         baseURL: '.',
         paths: {
-          'babel': '../../node_modules/babel-core/browser.js',
+          'babel': 'lib/vendor/browser.min.js',
+          'phantomjs-polyfill': '../../node_modules/phantomjs-polyfill/bind-polyfill.js',
           'system-polyfills': '../../node_modules/systemjs/dist/system-polyfills.js',
           'systemjs': '../../node_modules/systemjs/dist/system.js',
           'es6-module-loader': '../../node_modules/es6-module-loader/dist/es6-module-loader.js'
