@@ -1,4 +1,5 @@
-import angularMocks from 'vendor/angular-mocks.js';
+/* global inject */
+import { } from 'vendor/angular-mocks.js';
 import ModuleA from 'app/moduleA/moduleA.module.js';
 
 describe('hello world directive in moduleA', () => {

@@ -1,4 +1,5 @@
-import angularMocks from 'vendor/angular-mocks.js';
+/* global inject */
+import { } from 'vendor/angular-mocks.js';
 import ModuleB from 'app/moduleB/moduleB.module.js';
 
 describe('moduleB adder service', () => {
