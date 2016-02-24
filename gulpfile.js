@@ -50,7 +50,10 @@
 
   gulp.task('build', ['move'], function(done) {
     var builder = new Builder('src/client/', 'src/client/system.config.js');
-    builder.bundle('app/app.js', 'src/client/dist/bundle.js')
+    builder.bundle('app/app.js', 'src/client/dist/bundle.js', {
+      minify: true,
+      sourceMaps: true
+    })
     .then(function() {
       console.log('Build complete');
       done();
