@@ -71,8 +71,7 @@ module.exports = function(config) {
         sourceMap: 'inline'
       },
       sourceFileName: function(file) {
-        console.log('Source file name for ' + file.originalPath);
-        return file.originalPath;
+        return file.originalpath;
       }
     },
 
