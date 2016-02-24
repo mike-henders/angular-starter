@@ -7,7 +7,7 @@ module.exports = function(config) {
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: 'src/client/',
 
-    plugins: ['karma-systemjs', 'karma-coverage', 'karma-jasmine', 'karma-phantomjs-launcher', 'karma-chrome-launcher', 'karma-babel-preprocessor'],
+    plugins: ['karma-systemjs', 'karma-coverage', 'karma-jasmine', 'karma-phantomjs2-launcher', 'karma-chrome-launcher', 'karma-babel-preprocessor'],
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
@@ -19,7 +19,6 @@ module.exports = function(config) {
       config: {
         baseURL: '.',
         paths: {
-          'phantomjs-polyfill': '../../node_modules/phantomjs-polyfill/bind-polyfill.js',
           'babel': '../../node_modules/babel-core/browser.js',
           'system-polyfills': '../../node_modules/systemjs/dist/system-polyfills.js',
           'systemjs': '../../node_modules/systemjs/dist/system.js',
@@ -116,7 +115,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['PhantomJS'],
+    browsers: ['PhantomJS2'],
 
 
     // Continuous Integration mode
