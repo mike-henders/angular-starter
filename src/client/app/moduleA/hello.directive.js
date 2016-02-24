@@ -2,7 +2,7 @@ import angular from 'vendor/angular.js';
 
 function controller(calculatorService) {
   let vm = this;
-  vm.position = 2;
+  vm.position = calculatorService.add(1,1);
 }
 controller.$inject = ['calculatorService'];
 

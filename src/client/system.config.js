@@ -22,5 +22,8 @@ System.config({
         'vendor/jquery.js'
       ]
     }
-  } 
+  },
+  paths: {
+    'app/*': 'app/*'
+  }
 });

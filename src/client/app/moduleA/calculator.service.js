@@ -1,8 +1,11 @@
 export class Calculator {
-  constructor() {
+  constructor(adderService) {
+    this.adder = adderService;
   }
 
   add(a, b) {
-    return a + b;
+    return this.adder.execute(a, b);
   }
 }
+
+Calculator.$inject = ['adderService'];
