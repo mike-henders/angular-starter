@@ -27,7 +27,16 @@ module.exports = function(config) {
         },
         map: {
           'vendor/angular.js': 'lib/vendor/angular.min.js',
-          'vendor/jquery.js':  'lib/vendor/jquery.min.js'
+          'vendor/jquery.js':  'lib/vendor/jquery.min.js',
+          'vendor/angular-mocks.js': 'lib/vendor/angular-mocks.js'
+        },
+        meta: {
+          'vendor/angular-mocks.js': {
+            format: 'global',
+            deps: [
+              'vendor/angular.js'
+            ]
+          }
         }
       }
     },

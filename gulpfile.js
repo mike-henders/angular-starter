@@ -41,7 +41,8 @@
       'node_modules/es6-module-loader/dist/es6-module-loader.js',
       'node_modules/es6-module-loader/dist/es6-module-loader.js.map',
       'node_modules/angular/angular.min.js',
-      'node_modules/angular/angular.min.js.map'
+      'node_modules/angular/angular.min.js.map',
+      'node_modules/angular-mocks/angular-mocks.js'
     );
 
     return gulp.src(nodeModules)

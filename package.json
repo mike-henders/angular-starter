@@ -54,6 +54,7 @@
   },
   "dependencies": {
     "angular": "^1.5.0",
+    "angular-mocks": "^1.5.0",
     "babel": "^6.3.26",
     "babel-runtime": "^6.3.19",
     "jquery": "^2.2.1",
