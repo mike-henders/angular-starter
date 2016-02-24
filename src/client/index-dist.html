@@ -10,7 +10,7 @@
     <script src="dist/bundle.js"></script>
   </head>
   <body>
-    <h1 ng-controller="HelloController">{{greeting}}</h1>
+    <hello></hello>
     <p>The answer is: <span class="answer">... in deep thought ...</span><p>
     <script>
 Promise.all([
@@ -19,7 +19,7 @@ Promise.all([
 ]).then(function(modules) {
   var app = modules[0];
   var angular = modules[1];
-  angular.bootstrap(document, ['app']);
+  angular.bootstrap(document, ['app'], { strictDi: true });
   angular.element('.answer').text(app.think());
 });
     </script>
