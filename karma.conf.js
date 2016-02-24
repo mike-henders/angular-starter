@@ -7,7 +7,7 @@ module.exports = function(config) {
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: 'src/client/',
 
-    plugins: ['karma-systemjs', 'karma-coverage', 'karma-jasmine', 'karma-phantomjs2-launcher', 'karma-chrome-launcher', 'karma-babel-preprocessor'],
+    plugins: ['karma-systemjs', 'karma-coverage', 'karma-jasmine', 'karma-phantomjs-launcher', 'karma-chrome-launcher', 'karma-babel-preprocessor'],
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
@@ -115,7 +115,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['PhantomJS2'],
+    browsers: ['PhantomJS'],
 
 
     // Continuous Integration mode
