@@ -31,6 +31,9 @@
     let nodeModules = [].concat(
       'node_modules/jquery/dist/jquery.min.js',
       'node_modules/jquery/dist/jquery.min.map',
+      'node_modules/systemjs-plugin-babel/plugin-babel.js',
+      'node_modules/systemjs-plugin-babel/systemjs-babel-browser.js',
+      'node_modules/systemjs-plugin-babel/babel-helpers**/*.js',
       'node_modules/systemjs/dist/system.js',
       'node_modules/systemjs/dist/system.src.js',
       'node_modules/systemjs/dist/system.js.map',
