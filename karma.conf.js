@@ -19,16 +19,17 @@ module.exports = function(config) {
       config: {
         baseURL: '.',
         paths: {
-          'babel': 'lib/vendor/browser.min.js',
+          'systemjs': '../../node_modules/systemjs/dist/system.js',
           'phantomjs-polyfill': '../../node_modules/phantomjs-polyfill/bind-polyfill.js',
           'system-polyfills': '../../node_modules/systemjs/dist/system-polyfills.js',
-          'systemjs': '../../node_modules/systemjs/dist/system.js',
           'es6-module-loader': '../../node_modules/es6-module-loader/dist/es6-module-loader.js'
         },
         map: {
           'vendor/angular.js': 'lib/vendor/angular.min.js',
           'vendor/jquery.js':  'lib/vendor/jquery.min.js',
-          'vendor/angular-mocks.js': 'lib/vendor/angular-mocks.js'
+          'vendor/angular-mocks.js': 'lib/vendor/angular-mocks.js',
+          'plugin-babel': 'lib/vendor/plugin-babel.js',
+          'systemjs-babel-build': 'lib/vendor/systemjs-babel-browser.js'
         },
         meta: {
           'vendor/angular-mocks.js': {

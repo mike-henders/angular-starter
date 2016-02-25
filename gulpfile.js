@@ -51,6 +51,17 @@
 
   gulp.task('build', ['move'], function(done) {
     var builder = new Builder('src/client/', 'src/client/system.config.js');
+    builder.config({
+      paths: {
+        'node_modules/': './node_modules/',
+        'plugin-babel.js': './node_modules/systemjs-plugin-babel/plugin-babel.js',
+        'systemjs-babel-node.js': './node_modules/systemjs-plugin-babel/systemjs-babel-node.js'
+      },
+      map: {
+        'plugin-babel': 'plugin-babel.js',
+        'systemjs-babel-build': 'systemjs-babel-node.js'
+      }
+    });
     builder.bundle('app/app.js', 'src/client/dist/bundle.js', {
       minify: true,
       sourceMaps: true
